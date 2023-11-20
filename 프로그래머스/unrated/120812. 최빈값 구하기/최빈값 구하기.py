@@ -1,9 +1,16 @@
 def solution(array):
-    a_dict = {}
-    for i in set(array):
-        a_dict.setdefault(i,0)
-    for i in array:
-        a_dict[i] += 1
-    ad_max = max(a_dict.values())
-    result = [k for k, v in a_dict.items() if v == ad_max]
-    return result[0] if len(result) == 1 else -1
+    setA = set(array)
+    cntDict = {}
+    for i in setA:
+        cntDict[i] = array.count(i)
+
+    vList = list(cntDict.values())
+    maxValue = max(vList)
+    vList.remove(maxValue)
+
+    if maxValue in vList:
+        return -1
+    else:
+        for key, value in cntDict.items():
+            if value == maxValue:
+                return key
