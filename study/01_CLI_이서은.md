@@ -34,6 +34,10 @@
 
 ### (8) cp [파일명] [위치]
 - `cp`(copy): 파일 복사
+```
+touch a.txt
+cp a.txt ~/Downloads/
+```
 
 ### (9) cp -r [폴더명] [위치]
 - `cp -r`: 폴더 복사
