@@ -1,12 +1,14 @@
 def solution(num_list, n):
-    result = []
-    while len(num_list) !=0:
-        lst = []
-        for i in range(0, n):
-            num = num_list.pop(0)
-            lst.append(num)
-        result.append(lst)
-    return result
+    res = []
+    i = 0
+    for i in range(0, len(num_list), n):
+        temp = []
+        for j in range(0, n):
+            temp.append(num_list[i])
+            i = i + 1
+        res.append(temp)
+        
+    return res
                    
     
     
