@@ -1,6 +1,3 @@
 def solution(arr):
-    if len(arr) <= 1:
-        return [-1]
-    else:
-        arr.pop(arr.index(min(arr)))
-        return arr
+    arr.remove(min(arr))
+    return ([-1] if len(arr) == 0 else arr)
